@@ -1,0 +1,1 @@
+{"rustc":9625425233117027066,"features":"","declared_features":"","target":0,"profile":0,"path":0,"deps":[[4877130172185981051,"build_script_build",false,5303271986098092557],[7648903741785607723,"build_script_build",false,1302298272802554282]],"local":[{"Precalculated":"0.9.31"}],"rustflags":["-C","link-args=-nostdlib"],"config":0,"compile_kind":0}
