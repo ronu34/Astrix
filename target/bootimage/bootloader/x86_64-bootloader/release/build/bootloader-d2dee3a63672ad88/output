@@ -1,7 +1,7 @@
-cargo:rerun-if-changed=/run/media/ekadrisarkar/Ventoy/aether_os/Cargo.toml
-cargo:rustc-link-search=native=/run/media/ekadrisarkar/Ventoy/aether_os/target/bootimage/bootloader/x86_64-bootloader/release/build/bootloader-d2dee3a63672ad88/out
-cargo:rustc-link-lib=static=kernel_bin-aether_os
+cargo:rerun-if-changed=/run/media/ekadrisarkar/Ventoy/astrix/Cargo.toml
+cargo:rustc-link-search=native=/run/media/ekadrisarkar/Ventoy/astrix/target/bootimage/bootloader/x86_64-bootloader/release/build/bootloader-d2dee3a63672ad88/out
+cargo:rustc-link-lib=static=kernel_bin-Astrix-8e0e2cc1f2682833
 cargo:rerun-if-env-changed=KERNEL
 cargo:rerun-if-env-changed=KERNEL_MANIFEST
-cargo:rerun-if-changed=/run/media/ekadrisarkar/Ventoy/aether_os/target/x86_64-aether_os/debug/aether_os
+cargo:rerun-if-changed=/run/media/ekadrisarkar/Ventoy/astrix/target/x86_64-aether_os/debug/deps/Astrix-8e0e2cc1f2682833
 cargo:rerun-if-changed=build.rs
