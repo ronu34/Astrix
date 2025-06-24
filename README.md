@@ -2,11 +2,10 @@
 
 *A simple yet ambitious hobby OS kernel built from scratch in Rust.*
 
-![Astrix Banner](https://via.placeholder.com/800x200?text=Astrix+Kernel)
 
 ## 🚀 Overview
 
-Astrix is the beating heart of **Aether OS** — a minimal, modular, and blazing-fast operating system designed with clarity, learning, and flexibility in mind. It began with a single `println!()` and has grown into a powerful custom-built kernel created by a 13-year-old dev with unstoppable curiosity.
+Astrix is the beating heart of **Aether OS** — a minimal, modular, and blazing-fast operating system designed with clarity, learning, and flexibility in mind. It only has println! , print!, write! working.
 
 ## ✨ Features
 
