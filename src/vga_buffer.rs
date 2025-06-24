@@ -82,6 +82,16 @@ impl Writer {
 
 }
 
+/// Provides methods for writing text to a VGA text buffer.
+///
+/// # Methods
+///
+/// - `write_string(&mut self, s: &str)`: Writes a string to the buffer, handling printable ASCII bytes and newlines.
+///   Non-printable bytes are replaced with `0xfe`.
+///
+/// - `new_line(&mut self)`: Moves all rows up by one, clearing the last row and resetting the column position.
+///
+/// - `clear_row(&mut self, row: usize)`: Clears a specific row by filling it with blank characters using the current color code.
  impl Writer {
     pub fn write_string(&mut self, s: &str) {
         for byte in s.bytes() {
@@ -167,4 +177,27 @@ macro_rules! println {
 pub fn _print(args: fmt::Arguments) {
     use core::fmt::Write;
     WRITER.lock().write_fmt(args).unwrap();
+}
+
+
+#[test_case]
+fn test_println_simple() {
+    println!("test_println_simple output");
+}
+
+#[test_case]
+fn test_println_many() {
+    for _ in 0..200 {
+        println!("test_println_many output");
+    }
+}
+
+#[test_case]
+fn test_println_output() {
+    let s = "Some test string that fits on a single line";
+    println!("{}", s);
+    for (i, c) in s.chars().enumerate() {
+        let screen_char = WRITER.lock().buffer.chars[BUFFER_HEIGHT - 2][i].read();
+        assert_eq!(char::from(screen_char.ascii_character), c);
+    }
 }
