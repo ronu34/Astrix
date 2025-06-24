@@ -1,1 +1,1 @@
-/run/media/ekadrisarkar/Ventoy/astrix/target/x86_64-aether_os/debug/libAstrix.rlib: /run/media/ekadrisarkar/Ventoy/astrix/src/lib.rs /run/media/ekadrisarkar/Ventoy/astrix/src/serial.rs /run/media/ekadrisarkar/Ventoy/astrix/src/vga_buffer.rs
+/run/media/ekadrisarkar/Ventoy/astrix/target/x86_64-aether_os/debug/libAstrix.rlib: /run/media/ekadrisarkar/Ventoy/astrix/src/interrupts.rs /run/media/ekadrisarkar/Ventoy/astrix/src/lib.rs /run/media/ekadrisarkar/Ventoy/astrix/src/serial.rs /run/media/ekadrisarkar/Ventoy/astrix/src/vga_buffer.rs
