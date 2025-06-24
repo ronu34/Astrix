@@ -14,7 +14,7 @@ Astrix is the beating heart of **Aether OS** — a minimal, modular, and blazing
 - ⚠️ Kernel panic handler
 - 🧱 No_std + bare-metal build
 - 💥 Boots with QEMU or real hardware
-
+-CPU Exception and Interrupt management
 
 ## 📦 Build & Run
 
@@ -32,3 +32,4 @@ rustup default nightly
 
 # Run with QEMU
 cargo run
+
