@@ -30,11 +30,5 @@ git clone https://github.com/ronu34/Astrix.git
 # Install Rust nightly
 rustup default nightly
 
-# Add target
-rustup target add x86_64-aether_os
-
-# Build
-cargo build --target x86_64-aether_os.json
-
 # Run with QEMU
 cargo run
