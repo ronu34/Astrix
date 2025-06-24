@@ -18,7 +18,7 @@ fn panic(info: &PanicInfo) -> ! {
 #[unsafe(no_mangle)]
 pub extern "C" fn _start() -> ! {
     println!("hello from Astrix OS! wrote in Rust! n Using VGA buffer");
-    println!("hello from Astrix OS! wrote in Rust! n Using VGA buffer");
+    
     #[cfg(test)]
     test_main();
 
