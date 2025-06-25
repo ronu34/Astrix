@@ -9,20 +9,26 @@ use Astrix::println;
 
 #[unsafe(no_mangle)]
 pub extern "C" fn _start() -> ! {
-    println!("Hello World{}", "!");
+       println!("Hello World{}", "!");
 
-    Astrix::init(); // new
+    Astrix::init();
 
-    // invoke a breakpoint exception
-    x86_64::instructions::interrupts::int3(); // new
+    fn stack_overflow() {
+        stack_overflow(); // for each recursion, the return address is pushed
+    }
 
-    // as before
-    #[cfg(test)]
-    test_main();
-
-    println!("It did not crash!");
+    // trigger a stack overflow
+    stack_overflow();
     loop {}
 }
+
+// Define StackPointer as a type alias for a pointer-sized unsigned integer
+type StackPointer = usize;
+
+struct InterruptStackTable {
+    stack_pointers: [Option<StackPointer>; 7],
+}
+
 
 /// This function is called on panic.
 #[cfg(not(test))]
